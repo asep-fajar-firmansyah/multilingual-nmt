@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1qwbNZLo96b-dp3_O99MIo7QoCwKfD8GM
 """
 
-from google.colab import drive
-drive.mount('/content/gdrive', force_remount=True)
+#from google.colab import drive
+#drive.mount('/content/gdrive', force_remount=True)
 
 # Commented out IPython magic to ensure Python compatibility.
 # %cd /content/gdrive/'My Drive'/nmtls
