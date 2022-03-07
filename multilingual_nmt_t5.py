@@ -280,5 +280,5 @@ model_params={
 
 }
 
-T5Trainer(dataframe=df[:500], source_text="ls", target_text="verbalization", model_params=model_params, output_dir="outputs")
+T5Trainer(dataframe=df, source_text="ls", target_text="verbalization", model_params=model_params, output_dir="outputs")
 
