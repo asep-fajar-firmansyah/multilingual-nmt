@@ -14,8 +14,8 @@ for filename in filenames:
     dfs.append(df)
 
 df = pd.concat(dfs, axis=0, ignore_index=True)
-max_value_ls = df["ls"].max()
-max_value_verbalization = df["verbalization"].max()    
+max_value_ls = len(df["ls"].max())
+max_value_verbalization = len(df["verbalization"].max())    
 
 print("")
 print("##### Dataset samples #####")
