@@ -15,7 +15,7 @@ for filename in filenames:
 
 df = pd.concat(dfs, axis=0, ignore_index=True)
 
-max_length_ls = max([len(ls) for ls in df["ls"]])
+max_length_ls = max([len(ls.split()) for ls in df["ls"]])
 max_length_verbalization = max([len(words.split(" ")) for words in df["verbalization"]])
 print("")
 print("##### Dataset samples #####")
