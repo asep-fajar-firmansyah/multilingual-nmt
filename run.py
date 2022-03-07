@@ -14,11 +14,11 @@ for filename in filenames:
     dfs.append(df)
 
 df = pd.concat(dfs, axis=0, ignore_index=True)
-max_value_ls = len(df["ls"].max())
-max_value_verbalization = len(df["verbalization"].max())    
 
+max_length_ls = max([len(ls) for ls in df["ls"]])
+max_length_verbalization = max([len(words.split(" ") for words in df["verbalization"])])
 print("")
 print("##### Dataset samples #####")
 print(df.sample(10))
-print(f"max length for ls: {max_value_ls}")
-print(f"max length for verbalization: {max_value_verbalization}")
+print(f"max length for ls: {max_length_ls}")
+print(f"max length for verbalization: {max_length_verbalization}")
