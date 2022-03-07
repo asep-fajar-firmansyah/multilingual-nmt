@@ -21,8 +21,8 @@ import pandas as pd
 filenames = ['train.txt', 'dev.txt', 'test.txt']
 dfs=[]
 for filename in filenames:
-    df = pd.read_csv(f"dataset/DE/{filename}", delimiter="\t")
-    dfs.append(df)
+    data = pd.read_csv(f"dataset/DE/{filename}", delimiter="\t")
+    dfs.append(data)
 
 df = pd.concat(dfs, axis=0, ignore_index=True)
 
