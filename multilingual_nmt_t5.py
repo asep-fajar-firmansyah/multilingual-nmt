@@ -13,12 +13,12 @@ drive.mount('/content/gdrive', force_remount=True)
 # Commented out IPython magic to ensure Python compatibility.
 # %cd /content/gdrive/'My Drive'/nmtls
 
-!pip install sentencepiece
-!pip install transformers
-!pip install rich[jupyter]
+#!pip install sentencepiece
+#!pip install transformers
+#!pip install rich[jupyter]
 
 import pandas as pd
-df = pd.read_csv("data/DE/test.txt", delimiter="\t")
+df = pd.read_csv("dataset/DE/test.txt", delimiter="\t")
 df.head()
 
 df.sample(10)
