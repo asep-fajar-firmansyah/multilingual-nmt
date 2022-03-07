@@ -18,8 +18,13 @@ Original file is located at
 #!pip install rich[jupyter]
 
 import pandas as pd
-df = pd.read_csv("dataset/DE/test.txt", delimiter="\t")
-df.head()
+filenames = ['train.txt', 'dev.txt', 'test.txt']
+dfs=[]
+for filename in filenames:
+    df = pd.read_csv(f"dataset/DE/{filename}", delimiter="\t")
+    dfs.append(df)
+
+df = pd.concat(dfs, axis=0, ignore_index=True)
 
 df.sample(10)
 
