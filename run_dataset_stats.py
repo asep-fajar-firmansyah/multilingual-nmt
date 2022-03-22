@@ -13,8 +13,11 @@ print(df_en.head())
 print(df_en.describe(include='all'))
 ls_len_max = df_en["ls"].str.len().max()
 verbalization_len_max = df_en["verbalization"].str.len().max()
+print("")
+print("############ Max length based on character lever ###############")
 print(ls_len_max, verbalization_len_max)
 
+'''
 from sklearn.utils import shuffle
 df = shuffle(df_en)
 df.to_csv(f"df.csv", sep ='\t')
@@ -34,3 +37,4 @@ for i in range(20):
 
 all_dfs = pd.concat(dfs, axis=0, ignore_index=True)
 print(all_dfs.describe(include='all'))
+'''
